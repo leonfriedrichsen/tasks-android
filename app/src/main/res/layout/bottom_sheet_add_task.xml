@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.leonfriedrichsen.tasks.viewModel.TasksViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/bottomSheetSliderView"
+            android:layout_width="24dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bottom_sheet_slider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/nunito_bold"
+            android:text="@string/addTask"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bottomSheetSliderView" />
+
+        <ImageButton
+            android:id="@+id/deleteTaskButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/ripple_effect"
+            android:src="@drawable/icon_delete"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/titleTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/titleTextView"
+            tools:ignore="ContentDescription"
+            tools:visibility="visible" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/taskTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:hint="@string/taskStar"
+            app:hintTextColor="@color/secondaryTextColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/taskTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito"
+                android:imeOptions="actionDone"
+                android:inputType="text|textCapSentences"
+                android:text="@={viewModel.baseObservable.task}"
+                android:textColor="@color/primaryTextColor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/requiredTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/nunito"
+            android:text="@string/starRequired"
+            android:textColor="@color/secondaryTextColor"
+            app:layout_constraintEnd_toEndOf="@+id/taskTextInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/taskTextInputLayout" />
+
+        <DatePicker
+            android:id="@+id/datePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            app:layout_constraintBottom_toTopOf="@+id/addCardView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/requiredTextView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/addCardView"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:clickable="@{viewModel.baseObservable.task.empty || viewModel.baseObservable.task == null ? false : true}"
+            android:focusable="@{viewModel.baseObservable.task.empty || viewModel.baseObservable.task == null ? false : true}"
+            android:alpha="@{viewModel.baseObservable.task.empty || viewModel.baseObservable.task == null ? 0.75f : 1f}"
+            app:cardBackgroundColor="@color/accentColor"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:rippleColor="@color/backgroundColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/addTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/add"
+                android:fontFamily="@font/nunito_bold"
+                android:textColor="@color/backgroundColor"
+                android:textSize="24sp" />
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

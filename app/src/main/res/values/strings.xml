@@ -1,0 +1,13 @@
+<resources>
+    <string name="tomorrow">Tomorrow</string>
+    <string name="today">Today</string>
+    <string name="tasks">Tasks</string>
+    <string name="taskStar">Task*</string>
+    <string name="app_name">Tasks</string>
+    <string name="save">Save</string>
+    <string name="editTask">Edit Task</string>
+    <string name="addTasksThatYouWantToComplete">Add tasks that you want to complete.</string>
+    <string name="addTask">Add Task</string>
+    <string name="add">Add</string>
+    <string name="starRequired">*Required</string>
+</resources>

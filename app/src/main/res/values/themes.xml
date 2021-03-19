@@ -1,0 +1,26 @@
+<resources>
+
+    <style name="Theme.Tasks" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/accentColor</item>
+        <item name="colorPrimaryDark">@color/accentColor</item>
+        <item name="colorAccent">@color/accentColor</item>
+
+        <item name="android:statusBarColor">@color/backgroundColor</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="colorPrimary">@color/accentColor</item>
+        <item name="colorPrimaryDark">@color/accentColor</item>
+        <item name="colorAccent">@color/accentColor</item>
+
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/backgroundColor</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/BottomSheetBackground</item>
+    </style>
+
+    <style name="BottomSheetBackground" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_background</item>
+    </style>
+</resources>

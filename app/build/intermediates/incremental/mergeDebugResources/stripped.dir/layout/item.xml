@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/dayTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nunito_bold"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Heute" />
+
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="24dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/nunito_semibold"
+        android:maxLines="1"
+        android:textColor="@color/secondaryTextColor"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dayTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Do. 20. März" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dayTextView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="16dp"
+                android:layout_height="4dp"
+                android:layout_marginStart="32dp"
+                android:background="@drawable/task_dash"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:fontFamily="@font/nunito_bold"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/view"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/taskTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/nunito_bold"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/checkBox"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Aufgabe" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

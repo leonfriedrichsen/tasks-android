@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "D:\\Android Studio\\Projekte\\Tasks\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\bottom_sheet_add_task.xml",
+        "source": "D:\\Android Studio\\Projekte\\Tasks\\app\\src\\main\\res\\layout\\bottom_sheet_add_task.xml"
+    },
+    {
+        "merged": "D:\\Android Studio\\Projekte\\Tasks\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "D:\\Android Studio\\Projekte\\Tasks\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\Android Studio\\Projekte\\Tasks\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_done.xml",
+        "source": "D:\\Android Studio\\Projekte\\Tasks\\app\\src\\main\\res\\layout\\activity_done.xml"
+    }
+]

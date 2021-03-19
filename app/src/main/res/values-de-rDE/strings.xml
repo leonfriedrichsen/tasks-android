@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aufgaben</string>
+    <string name="tasks">Aufgaben</string>
+    <string name="addTask">Aufgabe hinzufügen</string>
+    <string name="editTask">Aufgabe bearbeiten</string>
+    <string name="add">Hinzufügen</string>
+    <string name="taskStar">Aufgabe*</string>
+    <string name="starRequired">*Pflichtfeld</string>
+    <string name="today">Heute</string>
+    <string name="tomorrow">Morgen</string>
+    <string name="addTasksThatYouWantToComplete">Füge Aufgaben hinzu, die du erledigen möchtest.</string>
+    <string name="save">Speichern</string>
+</resources>

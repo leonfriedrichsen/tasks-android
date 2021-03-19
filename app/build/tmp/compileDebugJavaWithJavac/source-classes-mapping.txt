@@ -1,0 +1,28 @@
+com/leonfriedrichsen/tasks/view/adapter/TasksAdapter.java
+ com.leonfriedrichsen.tasks.view.adapter.TasksAdapter
+ com.leonfriedrichsen.tasks.view.adapter.TasksAdapter$OnTaskClickListener
+ com.leonfriedrichsen.tasks.view.adapter.TasksAdapter$ViewHolder
+com/leonfriedrichsen/tasks/viewModel/TasksViewModel.java
+ com.leonfriedrichsen.tasks.viewModel.TasksViewModel
+com/leonfriedrichsen/tasks/repository/TasksRepository.java
+ com.leonfriedrichsen.tasks.repository.TasksRepository
+com/leonfriedrichsen/tasks/room/TasksEntity.java
+ com.leonfriedrichsen.tasks.room.TasksEntity
+com/leonfriedrichsen/tasks/databinding/BottomSheetAddTaskBinding.java
+ com.leonfriedrichsen.tasks.databinding.BottomSheetAddTaskBinding
+com/leonfriedrichsen/tasks/view/ui/AddTaskBottomSheet.java
+ com.leonfriedrichsen.tasks.view.ui.AddTaskBottomSheet
+com/leonfriedrichsen/tasks/databinding/ActivityMainBinding.java
+ com.leonfriedrichsen.tasks.databinding.ActivityMainBinding
+com/leonfriedrichsen/tasks/view/ui/MainActivity.java
+ com.leonfriedrichsen.tasks.view.ui.MainActivity
+com/leonfriedrichsen/tasks/room/TasksDatabase.java
+ com.leonfriedrichsen.tasks.room.TasksDatabase
+com/leonfriedrichsen/tasks/DataBindingTriggerClass.java
+ com.leonfriedrichsen.tasks.DataBindingTriggerClass
+com/leonfriedrichsen/tasks/BuildConfig.java
+ com.leonfriedrichsen.tasks.BuildConfig
+com/leonfriedrichsen/tasks/viewModel/baseObservable/TasksBaseObservable.java
+ com.leonfriedrichsen.tasks.viewModel.baseObservable.TasksBaseObservable
+com/leonfriedrichsen/tasks/room/TasksDao.java
+ com.leonfriedrichsen.tasks.room.TasksDao

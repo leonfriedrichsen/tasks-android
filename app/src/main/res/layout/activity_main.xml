@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.leonfriedrichsen.tasks.viewModel.TasksViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColor">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/backgroundColor"
+            app:liftOnScroll="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <ImageButton
+                    android:id="@+id/todayButton"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/ripple_effect"
+                    android:src="@drawable/icon_calendar"
+                    android:tint="@color/secondaryTextColor"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_bold"
+                    android:text="@string/tasks"
+                    android:textColor="@color/secondaryTextColor"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingBottom="96dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/noTasksLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_anchor="@id/recyclerView"
+            app:layout_anchorGravity="center"
+            tools:visibility="visible">
+
+            <ImageView
+                android:id="@+id/noTasksImageView"
+                android:layout_width="256dp"
+                android:layout_height="256dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/no_tasks"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/noTasksTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/addTasksThatYouWantToComplete"
+                android:textAlignment="center"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/noTasksImageView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="@color/accentColor"
+            android:src="@drawable/icon_add"
+            android:tint="@color/backgroundColor"
+            app:tint="@null"
+            app:borderWidth="0dp"
+            app:rippleColor="@color/backgroundColor"
+            tools:ignore="ContentDescription" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
